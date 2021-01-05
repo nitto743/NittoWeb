@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인주제</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <style>
+        body {
+          margin: 0;
+          height: 100vh;
+          background-image: url('img_2_1.jpg');
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          overflow-x: hidden;
+        }
+
+        .top {
+            margin-top: 1%;
+            width: 100%;
+            height: 40px;
+            background-color: rgba( 0, 0, 0, 0.3 );
+            color: white;
+            display: block;
+            text-align: right;
+            top:0px;
+            left:0px;
+            position: absolute;
+            font-family: Noto Sans KR;
+        }
+        #cover {
+            border-top: 100vh solid rgba(88, 142, 42, 0.7);
+            border-right: 60vh solid transparent;
+            width: 40%;
+            opacity: 0.5;
+        }
+        .left-box{
+          float: left;
+          display: flex;
+          height: 40px;
+        }
+        .right-box{
+          float: right;
+          display: flex;
+          height: 40px;
+          font-family: Noto Sans KR;
+        }
+        .module-box{
+          margin-left: 10px;
+          padding: 10px;
+          font-family: Noto Sans KR;
+        }
+        .module-box:hover{
+          cursor: pointer;
+        }
+        .home-box{
+          height: 30px;
+          width: 80px;
+          margin-left: 10px;
+          background-color: rgb(255, 146, 0);
+          border-radius: 10px;
+          margin: 5px;
+          line-height: 30px;
+          text-align: center;
+        }
+        .sub-title-box{
+          top:200px;
+          left:150px;
+          position: absolute;
+          color: white;
+          font-family: Noto Sans KR;
+        }
+        .sub-title-box h1{
+          font-size: 70px;
+          font-weight: 700;
+          margin-bottom: 0px;
+        }
+        .sub-title-box h3{
+          font-size: 30px;
+          font-weight: 300;
+          margin-top: 0px;
+        }
+        .more-button{
+          height: 40px;
+          background-color: rgb(248, 187, 0);
+          line-height: 50px;
+          width: 120px;
+          text-align: center;
+        }
+        .more-button:hover{
+          cursor: pointer;
+        }
+        .content-box{
+          width: 100%;
+          height: 100%;
+          background-image: url('img_2_2.jpg');
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          font-family: Noto Sans KR;
+        }
+
+        .flag {
+          border-left: 50vw solid lightGrey;
+          border-bottom: 18vh solid transparent;
+          border-right: 50vw solid lightGrey;
+          border-top: 40vh solid transparent;
+          
+        }
+        .flag-content-box{
+          width: 100%;
+          height: 40vh;
+          background-color: lightGrey;
+          top:100vh;
+          left:0px;
+          position: absolute;
+          display: flex;
+          font-family: Noto Sans KR;
+        }
+        .flag-content-box h3{
+          font-weight: 100;
+
+        }
+        .flag-content{
+          width: 33%;
+          margin: auto;
+          text-align: center;
+        }
+      </style>
+</head>
+<body>
+  <div id="cover">
+  </div>
+
+  <div class="top">
+    <div class="left-box">
+      <div class="module-box">
+        개인주제_2모듈_니토
+      </div>
+    </div>
+    <div class="right-box">
+      <div class="module-box" onclick="location.href='개인주제1모듈.html'">
+        모듈1
+      </div>
+      <div class="module-box" onclick="location.href='개인주제2모듈.html'">
+        모듈2
+      </div>
+      <div class="module-box" onclick="location.href='개인주제3모듈.html'">
+        모듈3
+      </div>
+      <div class="home-box" onclick="location.href='메인화면.html'">
+        홈페이지
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="sub-title-box">
+    <h1>LONE TIME</h1><br>
+    <h3>혼자만의 힐링이 필요한 순간</h3><br>
+    <div onclick="topFunction()" class="more-button">더 알아보기</div>
+  </div>
+
+  <div class="content-box" id="contentBox">
+    <div class="flag"></div>
+    <div class="flag-content-box">
+      <div class="flag-content">
+        <h1>WHY 왜?</h1><br>
+        <h3>사최수프의 주제중, 비폭력 게임에 대한 조사를 통해 아이디어를 발견하였다.</h3><br>
+      </div>
+        <div class="flag-content">
+        <h1>HOW 어떻게?</h1><br>
+        <h3>유튜브 강의를 보고 게임관련 제작하는 친구들에게 물어보며, 비슷한 게임들에 들어가 체험해 보았다.</h3><br>
+      </div>
+        <div class="flag-content">
+        <h1>WHAT 무엇을?</h1><br>
+        <h3> 힐링 쇼케이스(관전) 부류 게임을 제작해봤다.</h3><br>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function topFunction() {
+      var offset = $("#contentBox").offset();
+      $( 'html, body' ).stop().animate( { scrollTop : offset.top } )
+    }
+  </script>
+
+
+</body>
+</html>
